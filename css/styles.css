@@ -117,6 +117,10 @@ img {
   justify-self: flex-end;
 }
 
+.showcase-form h2 {
+  color: var(--main-text-color);
+}
+
 .showcase-form .form-control {
   margin: 30px 0;
 }
@@ -172,7 +176,7 @@ img {
 .languages .card {
   text-align: center;
   margin: 18px 10px 40px;
-  transition: transform .2s ease-in;
+  transition: transform 0.2s ease-in;
 }
 
 .languages .flex {
@@ -188,8 +192,56 @@ img {
   transform: translateY(-15px);
 }
 
-
 /* footer ****************************************************************************/
 .social a {
   margin: 0 10px;
+}
+
+/* Media queries *********************************************************************/
+
+/* Tablets and under */
+@media (max-width: 800px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+  }
+
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
