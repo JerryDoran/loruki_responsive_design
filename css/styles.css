@@ -52,6 +52,11 @@ pre {
   padding: 10px;
 }
 
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
 /* Navbar **************************************************************************/
 .navbar {
   background-color: var(--primary-color);
@@ -117,7 +122,7 @@ pre {
 }
 
 .showcase-text {
-  animation: slideInFromLeft .8s ease-in;
+  animation: slideInFromLeft 0.8s ease-in;
 }
 
 .showcase-form {
@@ -128,7 +133,7 @@ pre {
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
-  animation: slideInFromRight .8s ease-in;
+  animation: slideInFromRight 0.8s ease-in;
 }
 
 .showcase-form h2 {
@@ -154,7 +159,7 @@ pre {
 /* Stats section ***************************************************************/
 .stats {
   padding-top: 100px;
-  animation: slideInFromBottom .8s ease-in;
+  animation: slideInFromBottom 0.8s ease-in;
 }
 
 .stats-heading {
