@@ -115,10 +115,12 @@ pre {
 
 .showcase h1 {
   font-size: 40px;
+  text-transform: capitalize;
 }
 
 .showcase p {
   margin: 20px 0;
+  letter-spacing: 1px;
 }
 
 .showcase-text {
@@ -168,18 +170,25 @@ pre {
 }
 
 .stats .grid h3 {
-  font-size: 35px;
+  font-size: 28px;
 }
 
 .stats .grid p {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--main-text-color);
 }
 
 /* cli ****************************************************************************/
 .cli .grid {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid img {
+  height: 300px;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .cli .grid > *:first-child {
@@ -213,8 +222,21 @@ pre {
 }
 
 /* footer ****************************************************************************/
+footer nav li a {
+  transition: all 0.2s ease-in;
+}
+
+footer nav li a:hover {
+  color: var(--primary-color);
+}
+
 .social a {
   margin: 0 10px;
+  transition: all 0.2s ease-in;
+}
+
+.social a:hover {
+  color: var(--primary-color);
 }
 
 /* Features page *********************************************************************/
@@ -297,16 +319,18 @@ pre {
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(200%);
+    opacity: 0;
   }
 
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 /* Media queries *********************************************************************/
 
 /* Tablets and under */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .grid,
   .showcase .grid,
   .stats .grid,
