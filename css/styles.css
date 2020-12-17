@@ -180,7 +180,94 @@ pre {
 }
 
 /* cli ****************************************************************************/
-.cli .grid {
+.service {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+.about-img {
+  margin-bottom: 2rem;
+}
+
+.about-img img {
+  border-radius: 7px;
+  object-fit: cover;
+  height: 20rem;
+}
+
+.about {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: #f8f8f8;
+  margin-bottom: 4rem;
+  border-radius: 7px;
+}
+
+.btn-container {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn-container button {
+  text-transform: capitalize;
+}
+
+.tab-btn:nth-child(1) {
+  border-top-left-radius: 7px;
+}
+
+.tab-btn:nth-child(4) {
+  border-top-right-radius: 7px;
+}
+
+.tab-btn {
+  padding: 1rem 0;
+  background:#f8f8f8;
+  border: none;
+  border-right: 1px solid #ccc;
+  font-size: 1rem;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  letter-spacing: 1px;
+}
+
+.tab-btn:hover:not(.active) {
+  background: hsl(205, 100%, 96%);
+  color: var(--primary-color);
+}
+
+.tab-btn:nth-child(4) {
+  border-right: none;
+}
+
+.about-content {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  
+}
+
+.content {
+  display: none;
+  padding: 1rem;
+  
+}
+
+.content h4 {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.tab-btn.active {
+  background-color: #fff;
+}
+
+.content.active {
+  display: block;
+}
+
+/* .cli .grid {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
@@ -194,7 +281,7 @@ pre {
 .cli .grid > *:first-child {
   grid-column: span 2;
   grid-row: span 2;
-}
+} */
 
 /* cloud ***************************************************************************/
 .cloud .grid {
@@ -393,4 +480,21 @@ footer nav li a:hover {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.1);
   }
+}
+
+@media screen and (min-width: 992px) {
+  .about-img {
+    margin-bottom: 0;
+  }
+
+  .about-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+
+  .about-content {
+    height: 270px;
+  }
+
 }
