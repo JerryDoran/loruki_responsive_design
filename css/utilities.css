@@ -35,6 +35,10 @@
   margin: 10px;
 }
 
+.card p {
+  color: var(--main-dark-color);
+}
+
 .btn {
   display: inline-block;
   padding: 10px 30px;
@@ -77,7 +81,8 @@
 .bg-light,
 .btn-light {
   background-color: var(--light-color);
-  color: var(--main-dark-color);
+  color: var(--main-dark-color) !important;
+  font-weight: bold;
 }
 
 .bg-primary a,
@@ -92,6 +97,7 @@
 /* Text Sizes */
 .lead {
   font-size: 20px;
+  letter-spacing: 1px;
 }
 
 .sm {
@@ -104,7 +110,6 @@
 
 .lg {
   font-size: 3rem;
-  
 }
 
 .xl {
@@ -130,6 +135,7 @@
 .alert-success {
   background-color: var(--success-color);
   color: var(--main-white);
+  letter-spacing: 1px;
 }
 
 .alert-error {

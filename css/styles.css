@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 /* Global styles, custom properties and resets ****************************************/
 :root {
   --primary-color: #047aed;
   --secondary-color: #1c3fa8;
+  --alt-primary-color: #333;
   --dark-color: #002240;
   --light-color: #f4f4f4;
   --main-white: #ffffff;
@@ -59,7 +60,7 @@ pre {
 
 /* Navbar **************************************************************************/
 .navbar {
-  background-color: var(--primary-color);
+  background-color: var(--alt-primary-color);
   color: var(--main-white);
   height: 70px;
 }
@@ -85,7 +86,7 @@ pre {
 /* Showcase section ******************************************************************/
 .showcase {
   height: 400px;
-  background-color: var(--primary-color);
+  background-color: var(--alt-primary-color);
   color: var(--main-white);
   position: relative;
 }
@@ -167,6 +168,8 @@ pre {
 .stats-heading {
   max-width: 500px;
   margin: auto;
+  font-weight: 500;
+  margin: 4rem auto;
 }
 
 .stats .grid h3 {
@@ -175,7 +178,7 @@ pre {
 
 .stats .grid p {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--main-text-color);
 }
 
@@ -223,7 +226,7 @@ pre {
 
 .tab-btn {
   padding: 1rem 0;
-  background:#f8f8f8;
+  background: #f9f9f9;
   border: none;
   border-right: 1px solid #ccc;
   font-size: 1rem;
@@ -245,18 +248,23 @@ pre {
 .about-content {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
-  
 }
 
 .content {
   display: none;
   padding: 1rem;
-  
+}
+
+.content p {
+  color: var(--main-text-color);
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .content h4 {
   text-transform: capitalize;
   letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .tab-btn.active {
@@ -267,23 +275,15 @@ pre {
   display: block;
 }
 
-/* .cli .grid {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.cli .grid img {
-  height: 300px;
-  width: 500px;
-  margin: 0 auto;
-}
-
-.cli .grid > *:first-child {
-  grid-column: span 2;
-  grid-row: span 2;
-} */
-
 /* cloud ***************************************************************************/
+.cloud {
+  background-color: var(--alt-primary-color);
+}
+
+.cloud h2,
+p {
+  color: var(--main-white);
+}
 .cloud .grid {
   grid-template-columns: 4fr 3fr;
 }
@@ -309,30 +309,52 @@ pre {
 }
 
 /* footer ****************************************************************************/
+footer {
+  background-color: var(--alt-primary-color);
+}
+
+footer h1,
+a {
+  color: var(--light-color);
+}
+
 footer nav li a {
   transition: all 0.2s ease-in;
+  opacity: 0.6;
 }
 
 footer nav li a:hover {
-  color: var(--primary-color);
+  opacity: 1;
 }
 
 .social a {
   margin: 0 10px;
+  opacity: 0.6;
   transition: all 0.2s ease-in;
 }
 
 .social a:hover {
-  color: var(--primary-color);
+  opacity: 1;
 }
 
 /* Features page *********************************************************************/
+.features-head {
+  background-color: var(--alt-primary-color);
+}
+
+.features-head h1 {
+  color: var(--main-white);
+}
+
 .features-head img,
 .docs-head img {
   width: 200px;
   justify-self: flex-end;
 }
 
+.features-sub-head p {
+  color: var(--main-text-color);
+}
 .features-sub-head img {
   width: 300px;
   justify-self: flex-end;
@@ -355,6 +377,14 @@ footer nav li a:hover {
 }
 
 /* Docs page */
+.docs-head {
+  background-color: var(--alt-primary-color);
+}
+
+.docs-head h1 {
+  color: var(--main-white);
+}
+
 .docs-main h3 {
   margin: 20px 0;
 }
@@ -369,6 +399,16 @@ footer nav li a:hover {
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 1px #ccc solid;
+}
+
+.btn-cli {
+  background-color: var(--alt-primary-color);
+  color: var(--main-white) !important;
+}
+
+.docs-main a {
+  color: var(--main-text-color);
+  font-weight: 400;
 }
 
 .docs-main a:hover {
@@ -496,5 +536,4 @@ footer nav li a:hover {
   .about-content {
     height: 270px;
   }
-
 }
